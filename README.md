@@ -1,0 +1,2 @@
+# prodigal_wrapper
+multithreaded
