@@ -44,7 +44,7 @@ class ProdigalRunner(object):
         return 0
 
     def grid_run(self, input):
-        from src.qsub import qsub
+        from qsub import qsub
         cmd = self.generate_cmd(input)
         qsub.single_job(name="prodigal", user="keshav", errfile='/mnt/storage/grid/home/keshav/logs',
                         logfile="/mnt/storage/grid/home/keshav/logs", priority="smp-high", slots=1,
