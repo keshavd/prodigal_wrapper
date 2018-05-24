@@ -1,7 +1,8 @@
 
 class Config(object):
-    def __init__(self, cores=1, genus=None, files=None, output_dir=None):
+    def __init__(self, files, cores=1, output_dir="."):
+        from glob import glob
+        import os
+        self.files = glob("%s%s%s" % (files, os.sep, "*.fasta"))
         self.cores = cores
-        self.genus = genus
-        self.files = files
         self.output_dir = output_dir
